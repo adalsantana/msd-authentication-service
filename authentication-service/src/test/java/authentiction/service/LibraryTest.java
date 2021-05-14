@@ -4,6 +4,9 @@
 package authentiction.service;
 
 import org.junit.Test;
+
+import authentication.service.Library;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
