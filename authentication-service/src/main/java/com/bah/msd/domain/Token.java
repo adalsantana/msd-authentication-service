@@ -1,4 +1,4 @@
-package com.bah.msd.api;
+package com.bah.msd.domain;
 
 public class Token {
 	String token;

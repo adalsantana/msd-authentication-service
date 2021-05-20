@@ -1,5 +1,6 @@
-package com.bah.msd.api;
+package com.bah.msd.util;
 
+//verifying the contents of JWTs
 public class Authenticator {
 	
 	public static boolean checkUser(String username) {

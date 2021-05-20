@@ -1,4 +1,4 @@
-package com.bah.msd.api;
+package com.bah.msd.util;
 
 import java.util.Date;
 import java.util.Map;
@@ -10,6 +10,7 @@ import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.bah.msd.domain.Token;
 
 public class JWTHelper implements JWTUtil {
 	
@@ -28,6 +29,8 @@ public class JWTHelper implements JWTUtil {
 			        .sign(algorithm);
 			    return new Token(token);
 			} catch (JWTCreationException exception){
+				System.err.println("JWT creation exception " + exception.getMessage());
+				
 				return null;
 			}	
 		}

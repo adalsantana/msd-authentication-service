@@ -1,4 +1,6 @@
-package com.bah.msd.api;
+package com.bah.msd.util;
+
+import com.bah.msd.domain.Token;
 
 public interface JWTUtil {
 	public boolean verifyToken(String jwt_token);
