@@ -18,13 +18,9 @@ dependencies {
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'2.1.8.RELEASE'
     compile group: 'org.hsqldb', name: 'hsqldb', version:'2.4.1'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'2.1.8.RELEASE'
-<<<<<<< HEAD
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'2.1.8.RELEASE'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-=======
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'com.auth0:auth0:1.31.0'
->>>>>>> branch 'master' of https://github.com/adalsantana/msd-authentication-service.git
 }
 
 test {

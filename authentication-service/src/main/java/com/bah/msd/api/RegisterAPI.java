@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.bah.msd.domain.Customer;
+import com.bah.msd.domain.CustomerFactory;
+import com.bah.msd.domain.Token;
+import com.bah.msd.api.*;
+
 @RestController
 @RequestMapping("/register")
 public class RegisterAPI {
@@ -46,7 +51,7 @@ public class RegisterAPI {
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "application/json");
-	  		Token token = TokenAPI.getAppUserToken();
+	  		Token token = TokenAPI
 	  		conn.setRequestProperty("authorization", "Bearer " + token.getToken());
 	  		
 			OutputStream os = conn.getOutputStream();
