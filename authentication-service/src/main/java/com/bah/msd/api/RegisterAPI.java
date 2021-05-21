@@ -20,7 +20,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.bah.msd.domain.Customer;
 import com.bah.msd.domain.CustomerFactory;
 import com.bah.msd.domain.Token;
-import com.bah.msd.api.*;
 
 @RestController
 @RequestMapping("/register")
@@ -51,7 +50,7 @@ public class RegisterAPI {
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "application/json");
-	  		Token token = TokenAPI
+			Token token = TokenAPI.getAppUserToken();
 	  		conn.setRequestProperty("authorization", "Bearer " + token.getToken());
 	  		
 			OutputStream os = conn.getOutputStream();
@@ -81,4 +80,5 @@ public class RegisterAPI {
 			e.printStackTrace();
 
 		}
+}
 }
