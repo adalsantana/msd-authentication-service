@@ -5,11 +5,11 @@ node {
     }
     
     stage ("Gradle Build - AuthApi") {
-        sh 'gradle -b /authentication-service/build.gradle clean build'
+        sh 'gradle -b ./authentication-service/build.gradle clean build'
     }
     
     stage ("Gradle Bootjar-Package - AuthApi") {
-        sh 'gradle -b /authentication-service/build.gradle bootjar'
+        sh 'gradle -b ./authentication-service/build.gradle bootjar'
     }
     
     stage ("Containerize the app-docker build - AuthApi") {
