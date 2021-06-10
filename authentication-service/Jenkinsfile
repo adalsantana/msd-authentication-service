@@ -5,7 +5,7 @@ node {
     }
     
     stage ("Gradle Build - AuthApi") {
-        sh 'gradle -b ./authentication-service/build.gradle clean build'
+        sh 'gradle -b ./authentication-service/build.gradle clean'
     }
     
     stage ("Gradle Bootjar-Package - AuthApi") {
